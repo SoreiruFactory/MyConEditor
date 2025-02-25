@@ -12,21 +12,51 @@
         
         <div class="section">
             <h2>Shape Setting</h2>
-            <div class="input-box">
-                <button onclick="changeValue('height', -5)">◀</button>
-                <span id="heightValue" onmousedown="startDrag(event, 'height')">170mm</span>
-                <button onclick="changeValue('height', 5)">▶</button>
-            </div>
-            <label>Width: <input type="number" id="width" value="300"> mm</label>
-            <label>Corner: <input type="number" id="corner" value="20"> mm</label>
-            <label>Color: <input type="color" id="color" value="#afafaf"></label>
+            <label>Height:
+                <div class="input-box">
+                    <button onclick="changeValue('height', -5)">◀</button>
+                    <span id="heightValue">170mm</span>
+                    <button onclick="changeValue('height', 5)">▶</button>
+                </div>
+            </label>
+            <label>Width:
+                <div class="input-box">
+                    <button onclick="changeValue('width', -5)">◀</button>
+                    <span id="widthValue">300mm</span>
+                    <button onclick="changeValue('width', 5)">▶</button>
+                </div>
+            </label>
+            <label>Corner:
+                <div class="input-box">
+                    <button onclick="changeValue('corner', -5)">◀</button>
+                    <span id="cornerValue">20mm</span>
+                    <button onclick="changeValue('corner', 5)">▶</button>
+                </div>
+            </label>
+            <label>Color:
+                <input type="color" id="color" value="#afafaf">
+            </label>
         </div>
 
         <div class="section">
             <h2>Button Setting</h2>
-            <label>24mm: <input type="number" id="btn24" value="11"></label>
-            <label>30mm: <input type="number" id="btn30" value="1"></label>
-            <label>Button Color: <input type="color" id="btnColor" value="#3c3c3c"></label>
+            <label>24mm:
+                <div class="input-box">
+                    <button onclick="changeValue('btn24', -1)">◀</button>
+                    <span id="btn24Value">11</span>
+                    <button onclick="changeValue('btn24', 1)">▶</button>
+                </div>
+            </label>
+            <label>30mm:
+                <div class="input-box">
+                    <button onclick="changeValue('btn30', -1)">◀</button>
+                    <span id="btn30Value">1</span>
+                    <button onclick="changeValue('btn30', 1)">▶</button>
+                </div>
+            </label>
+            <label>Color:
+                <input type="color" id="btnColor" value="#3c3c3c">
+            </label>
         </div>
 
         <button id="save">Save</button>
