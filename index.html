@@ -12,7 +12,11 @@
         
         <div class="section">
             <h2>Shape Setting</h2>
-            <label>Height: <input type="number" id="height" value="170"> mm</label>
+            <div class="input-box">
+                <button onclick="changeValue('height', -5)">◀</button>
+                <span id="heightValue" onmousedown="startDrag(event, 'height')">170mm</span>
+                <button onclick="changeValue('height', 5)">▶</button>
+            </div>
             <label>Width: <input type="number" id="width" value="300"> mm</label>
             <label>Corner: <input type="number" id="corner" value="20"> mm</label>
             <label>Color: <input type="color" id="color" value="#afafaf"></label>
