@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap');
 
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     margin: 0;
     display: flex;
     background-color: #ddd;
 }
 
 .sidebar {
-    width: 300px;
+    width: 320px;
     background: #111;
     color: white;
     padding: 20px;
@@ -20,9 +20,9 @@ body {
 
 h1 {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 24px;
+    font-size: 26px;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     border-bottom: 2px solid white;
     padding-bottom: 10px;
     width: 100%;
@@ -43,22 +43,34 @@ h2 {
 }
 
 label {
-    display: block;
-    font-size: 14px;
-    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin: 10px 0;
+    justify-content: space-between;
 }
 
 input {
-    width: 80%;
+    width: 70px;
     padding: 5px;
-    background: #222;
+    background: transparent;
     color: white;
-    border: 1px solid white;
+    border: none;
+    font-size: 18px;
     text-align: center;
+    font-weight: bold;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    padding: 0;
+    border: none;
 }
 
 button {
-    width: 80%;
+    width: 90%;
     padding: 10px;
     margin: 5px 0;
     background: #444;
@@ -75,6 +87,7 @@ button:hover {
     color: #111;
 }
 
+/* 右側のコントローラーエリアを大きく */
 .editor {
     flex: 1;
     display: flex;
@@ -84,10 +97,10 @@ button:hover {
 }
 
 .controller {
-    width: 300px;
-    height: 170px;
+    width: 400px;  /* サイズを大きく */
+    height: 230px;
     background-color: #afafaf;
-    border-radius: 20px;
+    border-radius: 30px;
     position: relative;
 }
 
