@@ -47,6 +47,40 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // 数値の増減
+function changeValue(target, step) {
+    const span = document.getElementById(`${target}Value`);
+    let value = parseInt(span.textContent.replace("mm", ""));
+    value += step;
+    span.textContent = value + "mm";
+}
+
+// ドラッグによる変更
+let isDragging = false;
+let startX = 0;
+let targetValue = "";
+function startDrag(event, target) {
+    isDragging = true;
+    startX = event.clientX;
+    targetValue = document.getElementById(`${target}Value`);
+    document.addEventListener("mousemove", dragValue);
+    document.addEventListener("mouseup", stopDrag);
+}
+
+function dragValue(event) {
+    if (!isDragging) return;
+    let diff = Math.floor((event.clientX - startX) / 5);
+    let value = parseInt(targetValue.textContent.replace("mm", ""));
+    targetValue.textContent = (value + diff) + "mm";
+}
+
+function stopDrag() {
+    isDragging = false;
+    document.removeEventListener("mousemove", dragValue);
+    document.removeEventListener("mouseup", stopDrag);
+}
+
+
     // イベントリスナーを追加
     heightInput.addEventListener("input", updateController);
     widthInput.addEventListener("input", updateController);
